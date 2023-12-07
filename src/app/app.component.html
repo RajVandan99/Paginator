@@ -1,35 +1,14 @@
 <div class="container">
     <h1 class="text-center">App Component</h1>
     <div class="row">
-        <div class="col-sm-4">
-            <div class="card text-center" (click)="[count= count-1]">
-                <h4>
-                    Prev Component
-                </h4>
-                <p>
-                    <strong> {{count-1}} </strong>
-                </p>
-            </div>
+        <div class="col-sm-4 my-4">
+            <app-previous [preComp]="count-1" (click)="[count=count-1]"></app-previous>
         </div>
-        <div class="col-sm-4">
-            <div class="card text-center">
-                <h4>
-                    Current Component
-                </h4>
-                <p>
-                    <strong>{{count}} </strong>
-                </p>
-            </div>
+        <div class="col-sm-4 my-4">
+            <app-currrent [curCompo]="count"></app-currrent>
         </div>
-        <div class="col-sm-4">
-            <div class="card text-center" (click)="[count=count+1]">
-                <h4>
-                    Next Component
-                </h4>
-                <p>
-                    <strong> {{count+1}} </strong>
-                </p>
-            </div>
+        <div class="col-sm-4 my-4">
+            <app-next [nextComp]="count+1" (click)="[count=count+1]"></app-next>
         </div>
     </div>
 </div>
